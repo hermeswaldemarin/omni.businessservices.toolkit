@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <appender name="STDOUT" class="br.com.plusoftomni.integration.infrastructure.config.OmniTelephonyToolkitAppender">
+
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="TRACE">
+        <appender-ref ref="STDOUT" />
+    </root>
+
+
+    <logger name="org.springframework" level="DEBUG"/>
+    <logger name="br.com.plusoftomni" level="TRACE"/>
+
+
+</configuration>
